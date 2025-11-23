@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-multipart
+aiofiles
+# Optional ML deps you can install when ready:
+# torch
+# torchvision
+# torchaudio
+# tensorflow
+# opencv-python
