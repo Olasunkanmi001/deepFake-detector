@@ -6,21 +6,18 @@ import hashlib
 app = FastAPI(title="Deepfake Detector (MVP stub)")
 
 # -----------------------------
-# ✅ CORS CONFIGURATION (Step 4)
+# ✅ CORS CONFIGURATION (Fixed)
 # -----------------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-    ],
+    allow_origins=["*"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 # ---------------------------------------
-# Deepfake Stub Detection (no change)
+# Deepfake Stub Detection
 # ---------------------------------------
 def detect_deepfake_stub(file_bytes: bytes) -> dict:
     h = hashlib.sha256(file_bytes).hexdigest()

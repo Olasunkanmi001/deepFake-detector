@@ -25,7 +25,7 @@ export default function Home() {
     form.append("file", file);
 
     try {
-      const res = await fetch("http://localhost:5000/analyze", {
+      const res = await fetch("https://deepfake-backend-2-hob2.onrender.com", {
         method: "POST",
         body: form,
       });
