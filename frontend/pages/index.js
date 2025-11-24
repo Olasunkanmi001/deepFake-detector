@@ -81,7 +81,7 @@ export default function Home() {
         overflow: "hidden",
         fontFamily: "Inter, sans-serif",
         position: "relative",
-        transition: ".3s",
+        transition: ".4s",
       }}
     >
 
