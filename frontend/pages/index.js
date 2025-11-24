@@ -6,6 +6,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [dark, setDark] = useState(true);
   const [mediaURL, setMediaURL] = useState(null);
+  const BACKEND_URL = "https://deepfake-backend-2-hob2.onrender.com";
 
   const dropRef = useRef(null);
 
@@ -25,7 +26,7 @@ export default function Home() {
     form.append("file", file);
 
     try {
-      const res = await fetch("https://deepfake-backend-2-hob2.onrender.com", {
+      const res = await fetch(`${BACKEND_URL}/analyze`, {
         method: "POST",
         body: form,
       });
@@ -80,7 +81,7 @@ export default function Home() {
         overflow: "hidden",
         fontFamily: "Inter, sans-serif",
         position: "relative",
-        transition: ".4s",
+        transition: ".3s",
       }}
     >
 
